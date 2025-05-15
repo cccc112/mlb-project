@@ -12,8 +12,8 @@
 
 ## 結果展示
 
-![Heatmap](heatmap.png)
-![Heatmap](decision_tree.png)
+![Heatmap](mlbreport\heatmap.png)
+![Heatmap](mlbreport\decision_tree.png)
 
 ## 使用說明
 
