@@ -9,12 +9,12 @@ from sklearn.metrics import mean_squared_error, r2_score
 import os
 
 # 設定路徑
-base_path = "C:/Users/richc/OneDrive/桌面/專題/mlbdata"
-
+base_path_data = "C:/Users/richc/OneDrive/桌面/專題/mlbdata"
+base_path_report = "C:/Users/richc/OneDrive/桌面/專題/mlbreport"
 # 資料路徑
-combined_path = os.path.join(base_path, "OPS", "mlb_player_stats_10years_combined.csv")
-combined_w_path = os.path.join(base_path, "W", "mlb_player_stats_10years_combined-W.csv")
-combined_era_path = os.path.join(base_path, "ERA", "mlb_player_stats_10years_combined-era.csv")
+combined_path = os.path.join(base_path_data, "OPS", "mlb_player_stats_10years_combined.csv")
+combined_w_path = os.path.join(base_path_data, "W", "mlb_player_stats_10years_combined-W.csv")
+combined_era_path = os.path.join(base_path_data, "ERA", "mlb_player_stats_10years_combined-era.csv")
 
 # 讀取資料
 df_combined = pd.read_csv(combined_path)
@@ -44,7 +44,7 @@ merged = df_combined_grouped.merge(df_w_grouped, on=['Team', 'year'], how='inner
 merged = merged.merge(df_era_grouped, on=['Team', 'year'], how='inner', suffixes=('', '_ERA'))
 
 # 儲存合併結果
-merged.to_csv(os.path.join(base_path, "merged_output_team_year_avg.csv"), index=False)
+merged.to_csv(os.path.join(base_path_data, "merged_output_team_year_avg.csv"), index=False)
 print(f"合併成功，共 {len(merged)} 筆資料")
 
 # ---------- 熱力圖分析 ----------
@@ -62,7 +62,7 @@ plt.figure(figsize=(8, 6))
 sns.heatmap(win_corr, annot=True, cmap='coolwarm', fmt=".2f")
 plt.title("Pearson Correlation with Win Rate")
 plt.tight_layout()
-plt.savefig(os.path.join(base_path, "heatmap_team_year_avg.png"))
+plt.savefig(os.path.join(base_path_report, "heatmap_team_year_avg.png"))
 plt.show()
 
 # ---------- 選出重要特徵 ----------
@@ -107,7 +107,7 @@ plt.barh(X.columns[sorted_idx], importances[sorted_idx])
 plt.xlabel("Feature Importance")
 plt.title("Random Forest Feature Importance (Selected Features)")
 plt.tight_layout()
-plt.savefig(os.path.join(base_path, "rf_feature_importance_team_year_avg.png"))
+plt.savefig(os.path.join(base_path_report, "rf_feature_importance_team_year_avg.png"))
 plt.show()
 
 # ---------- 決策樹模型 ----------
@@ -122,7 +122,7 @@ print("R2 Score:", r2_score(y_test, tree_predictions))
 plt.figure(figsize=(20, 10))
 plot_tree(tree, feature_names=X.columns, filled=True, rounded=True)
 plt.title("Decision Tree (Selected Features)")
-plt.savefig(os.path.join(base_path, "decision_tree_team_year_avg.png"))
+plt.savefig(os.path.join(base_path_report, "decision_tree_team_year_avg.png"))
 plt.show()
 
 # ---------- 預測結果對比圖 ----------
@@ -134,5 +134,5 @@ plt.ylabel('Predicted Win Rate')
 plt.title('Random Forest: True vs Predicted Win Rate')
 plt.legend()
 plt.tight_layout()
-plt.savefig(os.path.join(base_path, "rf_vs_true_team_year_avg.png"))
+plt.savefig(os.path.join(base_path_report, "rf_vs_true_team_year_avg.png"))
 plt.show()
