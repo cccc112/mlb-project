@@ -1,0 +1,301 @@
+Year,League,Team,Wins,Losses,Win_Pct,Home_Record,Away_Record
+2015,American League,Baltimore Orioles,81,81,0.5,47-31,34-50
+2015,American League,Boston Red Sox,78,84,0.481,43-38,35-46
+2015,American League,New York Yankees,87,75,0.537,45-36,42-39
+2015,American League,Tampa Bay Rays,80,82,0.494,42-42,38-40
+2015,American League,Toronto Blue Jays,93,69,0.574,53-28,40-41
+2015,American League,Chicago White Sox,76,86,0.469,40-41,36-45
+2015,American League,Cleveland Indians,81,80,0.503,39-41,42-39
+2015,American League,Detroit Tigers,74,87,0.46,38-43,36-44
+2015,American League,Kansas City Royals,95,67,0.586,51-30,44-37
+2015,American League,Minnesota Twins,83,79,0.512,46-35,37-44
+2015,American League,Houston Astros,86,76,0.531,53-28,33-48
+2015,American League,Los Angeles Angels,85,77,0.525,49-32,36-41
+2015,American League,Oakland Athletics,68,94,0.42,34-47,34-47
+2015,American League,Seattle Mariners,76,86,0.469,36-45,40-41
+2015,American League,Texas Rangers,88,74,0.543,43-38,45-36
+2015,National League,Atlanta Braves,67,95,0.414,42-39,25-56
+2015,National League,Miami Marlins,71,91,0.438,41-40,30-51
+2015,National League,New York Mets,90,72,0.556,49-32,41-40
+2015,National League,Philadelphia Phillies,63,99,0.389,37-44,26-55
+2015,National League,Washington Nationals,83,79,0.512,46-35,37-44
+2015,National League,Chicago Cubs,97,65,0.599,53-28,44-37
+2015,National League,Cincinnati Reds,64,98,0.395,38-43,26-55
+2015,National League,Milwaukee Brewers,68,94,0.42,41-40,27-54
+2015,National League,Pittsburgh Pirates,98,64,0.605,53-28,45-36
+2015,National League,St. Louis Cardinals,100,62,0.617,53-28,47-34
+2015,National League,Arizona Diamondbacks,79,83,0.488,43-38,36-45
+2015,National League,Colorado Rockies,68,94,0.42,38-43,30-51
+2015,National League,Los Angeles Dodgers,92,70,0.568,51-30,41-40
+2015,National League,San Diego Padres,74,88,0.457,43-38,31-50
+2015,National League,San Francisco Giants,84,78,0.519,45-36,39-42
+2016,American League,Baltimore Orioles,89,73,0.549,47-34,42-39
+2016,American League,Boston Red Sox,93,69,0.574,48-33,45-36
+2016,American League,New York Yankees,84,78,0.519,44-37,40-41
+2016,American League,Tampa Bay Rays,68,94,0.42,37-44,31-50
+2016,American League,Toronto Blue Jays,89,73,0.549,46-35,43-38
+2016,American League,Chicago White Sox,78,84,0.481,45-36,33-48
+2016,American League,Cleveland Indians,94,67,0.584,53-28,41-39
+2016,American League,Detroit Tigers,86,75,0.534,45-35,41-40
+2016,American League,Kansas City Royals,81,81,0.5,47-34,34-47
+2016,American League,Minnesota Twins,59,103,0.364,30-51,29-52
+2016,American League,Houston Astros,84,78,0.519,45-36,39-42
+2016,American League,Los Angeles Angels,74,88,0.457,37-44,37-44
+2016,American League,Oakland Athletics,69,93,0.426,35-46,34-47
+2016,American League,Seattle Mariners,86,76,0.531,44-37,42-39
+2016,American League,Texas Rangers,95,67,0.586,53-28,42-39
+2016,National League,Atlanta Braves,68,93,0.422,37-43,31-50
+2016,National League,Miami Marlins,79,82,0.491,42-39,37-43
+2016,National League,New York Mets,87,75,0.537,44-37,43-38
+2016,National League,Philadelphia Phillies,71,91,0.438,37-44,34-47
+2016,National League,Washington Nationals,95,67,0.586,49-32,46-35
+2016,National League,Chicago Cubs,103,58,0.64,57-24,46-34
+2016,National League,Cincinnati Reds,68,94,0.42,38-43,30-51
+2016,National League,Milwaukee Brewers,73,89,0.451,41-40,32-49
+2016,National League,Pittsburgh Pirates,78,83,0.484,38-42,40-41
+2016,National League,St. Louis Cardinals,86,76,0.531,38-43,48-33
+2016,National League,Arizona Diamondbacks,69,93,0.426,39-42,30-51
+2016,National League,Colorado Rockies,75,87,0.463,46-35,29-52
+2016,National League,Los Angeles Dodgers,91,71,0.562,53-28,38-43
+2016,National League,San Diego Padres,68,94,0.42,35-46,33-48
+2016,National League,San Francisco Giants,87,75,0.537,45-36,42-39
+2017,American League,Baltimore Orioles,75,87,0.463,46-35,29-52
+2017,American League,Boston Red Sox,93,69,0.574,48-33,45-36
+2017,American League,New York Yankees,91,71,0.562,51-30,40-41
+2017,American League,Tampa Bay Rays,80,82,0.494,42-39,38-43
+2017,American League,Toronto Blue Jays,76,86,0.469,42-39,34-47
+2017,American League,Chicago White Sox,67,95,0.414,39-42,28-53
+2017,American League,Cleveland Indians,102,60,0.63,49-32,53-28
+2017,American League,Detroit Tigers,64,98,0.395,34-47,30-51
+2017,American League,Kansas City Royals,80,82,0.494,43-38,37-44
+2017,American League,Minnesota Twins,85,77,0.525,41-40,44-37
+2017,American League,Houston Astros,101,61,0.623,53-28,48-33
+2017,American League,Los Angeles Angels,80,82,0.494,39-42,41-40
+2017,American League,Oakland Athletics,75,87,0.463,35-46,40-41
+2017,American League,Seattle Mariners,78,84,0.481,45-36,33-48
+2017,American League,Texas Rangers,78,84,0.481,41-40,37-44
+2017,National League,Atlanta Braves,72,90,0.444,37-44,35-46
+2017,National League,Miami Marlins,77,85,0.475,43-38,34-47
+2017,National League,New York Mets,70,92,0.432,37-44,33-48
+2017,National League,Philadelphia Phillies,66,96,0.407,39-42,27-54
+2017,National League,Washington Nationals,97,65,0.599,49-32,48-33
+2017,National League,Chicago Cubs,92,70,0.568,48-33,44-37
+2017,National League,Cincinnati Reds,68,94,0.42,37-44,31-50
+2017,National League,Milwaukee Brewers,86,76,0.531,45-36,41-40
+2017,National League,Pittsburgh Pirates,75,87,0.463,39-42,36-45
+2017,National League,St. Louis Cardinals,83,79,0.512,43-38,40-41
+2017,National League,Arizona Diamondbacks,93,69,0.574,52-29,41-40
+2017,National League,Colorado Rockies,87,75,0.537,46-35,41-40
+2017,National League,Los Angeles Dodgers,104,58,0.642,57-24,47-34
+2017,National League,San Diego Padres,71,91,0.438,43-38,28-53
+2017,National League,San Francisco Giants,64,98,0.395,38-43,26-55
+2018,American League,Baltimore Orioles,47,115,0.29,28-53,19-62
+2018,American League,Boston Red Sox,108,54,0.667,57-24,51-30
+2018,American League,New York Yankees,100,62,0.617,53-28,47-34
+2018,American League,Tampa Bay Rays,90,72,0.556,51-30,39-42
+2018,American League,Toronto Blue Jays,73,89,0.451,35-46,38-43
+2018,American League,Chicago White Sox,62,100,0.383,30-51,32-49
+2018,American League,Cleveland Indians,91,71,0.562,49-32,42-39
+2018,American League,Detroit Tigers,64,98,0.395,38-43,26-55
+2018,American League,Kansas City Royals,58,104,0.358,32-49,26-55
+2018,American League,Minnesota Twins,78,84,0.481,49-32,29-52
+2018,American League,Houston Astros,103,59,0.636,58-23,45-36
+2018,American League,Los Angeles Angels,80,82,0.494,42-39,38-43
+2018,American League,Oakland Athletics,97,65,0.599,50-31,47-34
+2018,American League,Seattle Mariners,89,73,0.549,45-36,44-37
+2018,American League,Texas Rangers,67,95,0.414,34-47,33-48
+2018,National League,Atlanta Braves,90,72,0.556,43-38,47-34
+2018,National League,Miami Marlins,63,98,0.391,38-43,25-55
+2018,National League,New York Mets,77,85,0.475,37-44,40-41
+2018,National League,Philadelphia Phillies,80,82,0.494,49-32,31-50
+2018,National League,Washington Nationals,82,80,0.506,41-40,41-40
+2018,National League,Chicago Cubs,95,68,0.583,51-31,44-37
+2018,National League,Cincinnati Reds,67,95,0.414,37-44,30-51
+2018,National League,Milwaukee Brewers,96,67,0.589,49-32,47-35
+2018,National League,Pittsburgh Pirates,82,79,0.509,44-37,38-42
+2018,National League,St. Louis Cardinals,88,74,0.543,48-33,40-41
+2018,National League,Arizona Diamondbacks,82,80,0.506,40-41,42-39
+2018,National League,Colorado Rockies,91,72,0.558,47-34,44-38
+2018,National League,Los Angeles Dodgers,92,71,0.564,45-37,47-34
+2018,National League,San Diego Padres,66,96,0.407,31-50,35-46
+2018,National League,San Francisco Giants,73,89,0.451,42-39,31-50
+2019,American League,Baltimore Orioles,54,108,0.333,25-56,29-52
+2019,American League,Boston Red Sox,84,78,0.519,38-43,46-35
+2019,American League,New York Yankees,103,59,0.636,57-24,46-35
+2019,American League,Tampa Bay Rays,96,66,0.593,48-33,48-33
+2019,American League,Toronto Blue Jays,67,95,0.414,35-46,32-49
+2019,American League,Chicago White Sox,72,89,0.447,39-41,33-48
+2019,American League,Cleveland Indians,93,69,0.574,49-32,44-37
+2019,American League,Detroit Tigers,47,114,0.292,22-59,25-55
+2019,American League,Kansas City Royals,59,103,0.364,31-50,28-53
+2019,American League,Minnesota Twins,101,61,0.623,46-35,55-26
+2019,American League,Houston Astros,107,55,0.66,60-21,47-34
+2019,American League,Los Angeles Angels,72,90,0.444,38-43,34-47
+2019,American League,Oakland Athletics,97,65,0.599,52-29,45-36
+2019,American League,Seattle Mariners,68,94,0.42,36-45,32-49
+2019,American League,Texas Rangers,78,84,0.481,41-40,37-44
+2019,National League,Atlanta Braves,97,65,0.599,51-30,46-35
+2019,National League,Miami Marlins,57,105,0.352,30-51,27-54
+2019,National League,New York Mets,86,76,0.531,48-33,38-43
+2019,National League,Philadelphia Phillies,81,81,0.5,45-36,36-45
+2019,National League,Washington Nationals,93,69,0.574,50-31,43-38
+2019,National League,Chicago Cubs,84,78,0.519,51-30,33-48
+2019,National League,Cincinnati Reds,75,87,0.463,41-40,34-47
+2019,National League,Milwaukee Brewers,89,73,0.549,45-36,44-37
+2019,National League,Pittsburgh Pirates,69,93,0.426,35-46,34-47
+2019,National League,St. Louis Cardinals,91,71,0.562,50-31,41-40
+2019,National League,Arizona Diamondbacks,85,77,0.525,44-37,41-40
+2019,National League,Colorado Rockies,71,91,0.438,43-38,28-53
+2019,National League,Los Angeles Dodgers,106,56,0.654,59-22,47-34
+2019,National League,San Diego Padres,70,92,0.432,36-45,34-47
+2019,National League,San Francisco Giants,77,85,0.475,35-46,42-39
+2020,American League,Baltimore Orioles,25,35,0.417,13-20,12-15
+2020,American League,Boston Red Sox,24,36,0.4,11-20,13-16
+2020,American League,New York Yankees,33,27,0.55,22-9,11-18
+2020,American League,Tampa Bay Rays,40,20,0.667,20-9,20-11
+2020,American League,Toronto Blue Jays,32,28,0.533,17-9,15-19
+2020,American League,Chicago White Sox,35,25,0.583,18-12,17-13
+2020,American League,Cleveland Indians,35,25,0.583,18-12,17-13
+2020,American League,Detroit Tigers,23,35,0.397,11-19,12-16
+2020,American League,Kansas City Royals,26,34,0.433,15-15,11-19
+2020,American League,Minnesota Twins,36,24,0.6,24-7,12-17
+2020,American League,Houston Astros,29,31,0.483,19-9,10-22
+2020,American League,Los Angeles Angels,26,34,0.433,16-15,10-19
+2020,American League,Oakland Athletics,36,24,0.6,22-10,14-14
+2020,American League,Seattle Mariners,27,33,0.45,14-16,13-17
+2020,American League,Texas Rangers,22,38,0.367,16-15,6-23
+2020,National League,Atlanta Braves,35,25,0.583,19-9,16-16
+2020,National League,Miami Marlins,31,29,0.517,11-15,20-14
+2020,National League,New York Mets,26,34,0.433,12-18,14-16
+2020,National League,Philadelphia Phillies,28,32,0.467,9-21,19-11
+2020,National League,Washington Nationals,26,34,0.433,15-15,11-19
+2020,National League,Chicago Cubs,34,26,0.567,21-11,13-15
+2020,National League,Cincinnati Reds,31,29,0.517,19-12,12-17
+2020,National League,Milwaukee Brewers,29,31,0.483,14-17,15-14
+2020,National League,Pittsburgh Pirates,19,41,0.317,9-22,10-19
+2020,National League,St. Louis Cardinals,30,28,0.517,14-13,16-15
+2020,National League,Arizona Diamondbacks,25,35,0.417,13-17,12-18
+2020,National League,Colorado Rockies,26,34,0.433,14-16,12-18
+2020,National League,Los Angeles Dodgers,43,17,0.717,21-9,22-8
+2020,National League,San Diego Padres,37,23,0.617,21-10,16-13
+2020,National League,San Francisco Giants,29,31,0.483,19-14,10-17
+2021,American League,Baltimore Orioles,52,110,0.321,27-54,25-56
+2021,American League,Boston Red Sox,92,70,0.568,49-32,43-38
+2021,American League,New York Yankees,92,70,0.568,46-35,46-35
+2021,American League,Tampa Bay Rays,100,62,0.617,52-29,48-33
+2021,American League,Toronto Blue Jays,91,71,0.562,47-33,44-38
+2021,American League,Chicago White Sox,93,69,0.574,53-28,40-41
+2021,American League,Cleveland Indians,80,82,0.494,40-41,40-41
+2021,American League,Detroit Tigers,77,85,0.475,42-39,35-46
+2021,American League,Kansas City Royals,74,88,0.457,39-42,35-46
+2021,American League,Minnesota Twins,73,89,0.451,38-43,35-46
+2021,American League,Houston Astros,95,67,0.586,51-30,44-37
+2021,American League,Los Angeles Angels,77,85,0.475,40-42,37-43
+2021,American League,Oakland Athletics,86,76,0.531,43-38,43-38
+2021,American League,Seattle Mariners,90,72,0.556,46-35,44-37
+2021,American League,Texas Rangers,60,102,0.37,36-45,24-57
+2021,National League,Atlanta Braves,88,73,0.547,42-38,46-35
+2021,National League,Miami Marlins,67,95,0.414,42-39,25-56
+2021,National League,New York Mets,77,85,0.475,47-34,30-51
+2021,National League,Philadelphia Phillies,82,80,0.506,47-34,35-46
+2021,National League,Washington Nationals,65,97,0.401,35-46,30-51
+2021,National League,Chicago Cubs,71,91,0.438,38-43,33-48
+2021,National League,Cincinnati Reds,83,79,0.512,44-37,39-42
+2021,National League,Milwaukee Brewers,95,67,0.586,50-31,45-36
+2021,National League,Pittsburgh Pirates,61,101,0.377,32-49,29-52
+2021,National League,St. Louis Cardinals,90,72,0.556,47-34,43-38
+2021,National League,Arizona Diamondbacks,52,110,0.321,27-54,25-56
+2021,National League,Colorado Rockies,74,87,0.46,48-33,26-54
+2021,National League,Los Angeles Dodgers,106,56,0.654,58-23,48-33
+2021,National League,San Diego Padres,79,83,0.488,43-38,36-45
+2021,National League,San Francisco Giants,107,55,0.66,54-27,53-28
+2022,American League,Baltimore Orioles,83,79,0.512,45-36,38-43
+2022,American League,Boston Red Sox,78,84,0.481,43-38,35-46
+2022,American League,New York Yankees,99,63,0.611,57-24,42-39
+2022,American League,Tampa Bay Rays,86,76,0.531,51-30,35-46
+2022,American League,Toronto Blue Jays,92,70,0.568,47-34,45-36
+2022,American League,Chicago White Sox,81,81,0.5,45-36,36-45
+2022,American League,Cleveland Guardians,92,70,0.568,46-35,46-35
+2022,American League,Detroit Tigers,66,96,0.407,37-44,29-52
+2022,American League,Kansas City Royals,65,97,0.401,37-44,28-53
+2022,American League,Minnesota Twins,78,84,0.481,44-37,34-47
+2022,American League,Houston Astros,106,56,0.654,55-26,51-30
+2022,American League,Los Angeles Angels,73,89,0.451,40-41,33-48
+2022,American League,Oakland Athletics,60,102,0.37,29-52,31-50
+2022,American League,Seattle Mariners,90,72,0.556,46-35,44-37
+2022,American League,Texas Rangers,68,94,0.42,38-43,30-51
+2022,National League,Atlanta Braves,101,61,0.623,52-29,49-32
+2022,National League,Miami Marlins,69,93,0.426,40-41,29-52
+2022,National League,New York Mets,101,61,0.623,54-28,47-33
+2022,National League,Philadelphia Phillies,87,75,0.537,47-34,40-41
+2022,National League,Washington Nationals,55,107,0.34,32-49,23-58
+2022,National League,Chicago Cubs,74,88,0.457,37-44,37-44
+2022,National League,Cincinnati Reds,62,100,0.383,33-48,29-52
+2022,National League,Milwaukee Brewers,86,76,0.531,46-35,40-41
+2022,National League,Pittsburgh Pirates,62,100,0.383,34-47,28-53
+2022,National League,St. Louis Cardinals,93,69,0.574,53-28,40-41
+2022,National League,Arizona Diamondbacks,74,88,0.457,37-44,37-44
+2022,National League,Colorado Rockies,68,94,0.42,41-40,27-54
+2022,National League,Los Angeles Dodgers,111,51,0.685,57-24,54-27
+2022,National League,San Diego Padres,89,73,0.549,45-36,44-37
+2022,National League,San Francisco Giants,81,81,0.5,43-38,38-43
+2023,American League,Baltimore Orioles,101,61,0.623,49-32,52-29
+2023,American League,Boston Red Sox,78,84,0.481,39-42,39-42
+2023,American League,New York Yankees,82,80,0.506,42-39,40-41
+2023,American League,Tampa Bay Rays,99,63,0.611,53-28,46-35
+2023,American League,Toronto Blue Jays,89,73,0.549,43-38,46-35
+2023,American League,Chicago White Sox,61,101,0.377,30-51,31-50
+2023,American League,Cleveland Guardians,76,86,0.469,40-41,36-45
+2023,American League,Detroit Tigers,78,84,0.481,43-38,35-46
+2023,American League,Kansas City Royals,56,106,0.346,34-47,22-59
+2023,American League,Minnesota Twins,87,75,0.537,46-35,41-40
+2023,American League,Houston Astros,90,72,0.556,46-35,44-37
+2023,American League,Los Angeles Angels,73,89,0.451,38-43,35-46
+2023,American League,Oakland Athletics,50,112,0.309,28-53,22-59
+2023,American League,Seattle Mariners,88,74,0.543,44-37,44-37
+2023,American League,Texas Rangers,90,72,0.556,50-31,40-41
+2023,National League,Atlanta Braves,104,58,0.642,52-29,52-29
+2023,National League,Miami Marlins,84,78,0.519,46-35,38-43
+2023,National League,New York Mets,74,87,0.46,38-43,36-44
+2023,National League,Philadelphia Phillies,90,72,0.556,47-34,43-38
+2023,National League,Washington Nationals,71,91,0.438,35-46,36-45
+2023,National League,Chicago Cubs,83,79,0.512,44-37,39-42
+2023,National League,Cincinnati Reds,82,80,0.506,44-37,38-43
+2023,National League,Milwaukee Brewers,92,70,0.568,51-30,41-40
+2023,National League,Pittsburgh Pirates,76,86,0.469,39-42,37-44
+2023,National League,St. Louis Cardinals,71,91,0.438,44-37,27-54
+2023,National League,Arizona Diamondbacks,84,78,0.519,43-38,41-40
+2023,National League,Colorado Rockies,59,103,0.364,37-44,22-59
+2023,National League,Los Angeles Dodgers,100,62,0.617,53-28,47-34
+2023,National League,San Diego Padres,82,80,0.506,43-38,39-42
+2023,National League,San Francisco Giants,79,83,0.488,41-40,38-43
+2024,American League,Baltimore Orioles,91,71,0.562,44-37,47-34
+2024,American League,Boston Red Sox,81,81,0.5,38-43,43-38
+2024,American League,New York Yankees,94,68,0.58,44-37,50-31
+2024,American League,Tampa Bay Rays,80,82,0.494,42-39,38-43
+2024,American League,Toronto Blue Jays,74,88,0.457,39-42,35-46
+2024,American League,Chicago White Sox,41,121,0.253,23-58,18-63
+2024,American League,Cleveland Guardians,93,69,0.568,48-33,45-36
+2024,American League,Detroit Tigers,86,76,0.531,43-38,43-38
+2024,American League,Kansas City Royals,86,76,0.531,45-36,41-40
+2024,American League,Minnesota Twins,82,80,0.506,43-38,39-42
+2024,American League,Houston Astros,88,73,0.547,46-35,42-38
+2024,American League,Los Angeles Angels,72,90,0.444,35-46,37-44
+2024,American League,Oakland Athletics,62,100,0.383,34-47,28-53
+2024,American League,Seattle Mariners,85,77,0.525,47-34,38-43
+2024,American League,Texas Rangers,77,85,0.475,40-41,37-44
+2024,National League,Atlanta Braves,101,61,0.623,50-31,51-30
+2024,National League,Miami Marlins,74,88,0.457,40-41,34-47
+2024,National League,New York Mets,80,82,0.494,43-38,37-44
+2024,National League,Philadelphia Phillies,95,67,0.586,49-32,46-35
+2024,National League,Washington Nationals,65,97,0.401,30-51,35-46
+2024,National League,Chicago Cubs,83,79,0.512,44-37,39-42
+2024,National League,Cincinnati Reds,77,85,0.475,39-42,38-43
+2024,National League,Milwaukee Brewers,93,69,0.574,47-34,46-35
+2024,National League,Pittsburgh Pirates,76,86,0.469,39-42,37-44
+2024,National League,St. Louis Cardinals,83,79,0.512,44-37,39-42
+2024,National League,Arizona Diamondbacks,89,73,0.549,44-37,45-36
+2024,National League,Colorado Rockies,62,100,0.383,39-42,23-58
+2024,National League,Los Angeles Dodgers,106,56,0.654,56-25,50-31
+2024,National League,San Diego Padres,93,69,0.568,46-35,47-34
+2024,National League,San Francisco Giants,85,77,0.525,46-35,39-42

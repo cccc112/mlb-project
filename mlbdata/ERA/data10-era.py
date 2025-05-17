@@ -3,7 +3,7 @@ import glob
 import os
 
 # ✅ 指定你的資料夾路徑（改成原始 CSV 檔所在位置）
-folder_path = r"C:\Users\richc\OneDrive\桌面\專題\mlbdata"
+folder_path = r"C:\Users\richc\OneDrive\桌面\專題\mlbdata\ERA"
 
 # ✅ 找出所有符合命名規則的檔案
 file_paths = glob.glob(os.path.join(folder_path, "mlb-player-stats-*.csv"))
@@ -34,7 +34,7 @@ for path in file_paths:
 if all_dfs:
     combined_df = pd.concat(all_dfs, ignore_index=True)
     # 儲存
-    combined_df.to_csv(os.path.join(folder_path, "mlb_player_stats_10years_combined.csv"), index=False)
+    combined_df.to_csv(os.path.join(folder_path, "mlb_player_stats_10years_combined-era.csv"), index=False)
     print("🎉 合併完成，共有資料列數：", len(combined_df))
 else:
     print("❌ 沒有成功合併任何資料，請檢查檔案內容。")
