@@ -12,8 +12,8 @@
 
 ## 結果展示
 
-![Heatmap](mlbreport/heatmap.png)
-![Heatmap](mlbreport/decision_tree.png)
+![Heatmap](mlbreport/heatmap_team_year_avg.png)
+![Heatmap](mlbreport/decision_tree_team_year_avg.png)
 
 ## 使用說明
 
