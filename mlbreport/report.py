@@ -701,7 +701,7 @@ with pd.ExcelWriter(excel_output_path) as writer:
     df_all_results_regression_formatted.to_excel(writer, sheet_name='AllTeams_Regression', index=False)
     df_all_results_classification_formatted.to_excel(writer, sheet_name='AllTeams_Classification', index=False)
 
-print(f"\n✅ 結果已成功儲存為 Excel 檔：{excel_output_path}")
+print(f"\n 結果已成功儲存為 Excel 檔：{excel_output_path}")
 
 # --- 訓練用於互動式預測的特定模型 ---
 # 1. 使用 Engineered Features 訓練模型
