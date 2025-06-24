@@ -126,7 +126,7 @@ else:
 
 # === 加在你原本的 Feature Engineering 區塊之後 ===
 
-# ✅ 1. 建立 RFECV 選出特徵的加權組合：BB, ER, SV
+#  1. 建立 RFECV 選出特徵的加權組合：BB, ER, SV
 rfecv_base_features = ['BB', 'ER', 'SV']
 
 # 確保這三個變數都存在於資料中
@@ -393,8 +393,8 @@ if not X_all_features.empty and not y_target_continuous.empty and len(X_all_feat
             # 繪製 RFECV 評分曲線
             plt.figure(figsize=(10, 6))
             plt.title('RFECV: Optimal Number of Features')
-            plt.xlabel("Number of Features Selected") # Changed to English
-            plt.ylabel("Cross-validation score (R2)") # Changed to English
+            plt.xlabel("Number of Features Selected") 
+            plt.ylabel("Cross-validation score (R2)") 
             plt.plot(range(1, len(rfecv.cv_results_['mean_test_score']) + 1), rfecv.cv_results_['mean_test_score'])
             plt.tight_layout()
             rfecv_plot_path = os.path.join(base_path_report, "rfecv_score_plot.png")
@@ -606,26 +606,26 @@ df_all_results_regression = pd.concat([df_single_regression, df_regression_compa
 
 plt.figure(figsize=(12, 6))
 sns.boxplot(x='Model', y='MSE', hue='Feature_Set', data=df_all_results_regression)
-plt.title("Regression Model MSE Comparison (Different Feature Sets)") # Changed to English
+plt.title("Regression Model MSE Comparison (Different Feature Sets)") 
 plt.show()
-
+'''
 plt.figure(figsize=(12, 6))
 sns.boxplot(x='Model', y='R2', hue='Feature_Set', data=df_all_results_regression)
-plt.title("Regression Model R2 Comparison (Different Feature Sets)") # Changed to English
+plt.title("Regression Model R2 Comparison (Different Feature Sets)") 
 plt.show()
-
+'''
 # ======= Combine All Results (Classification Models) =======
 df_all_results_classification = pd.concat([df_single_classification, df_classification_compare, df_all_10y_results_clf], ignore_index=True)
 
 plt.figure(figsize=(12, 6))
 sns.boxplot(x='Model', y='Accuracy', hue='Feature_Set', data=df_all_results_classification)
-plt.title("Classification Model Accuracy Comparison (Different Feature Sets)") # Changed to English
+plt.title("Classification Model Accuracy Comparison (Different Feature Sets)") 
 plt.ylim(0, 1)
 plt.show()
 
 plt.figure(figsize=(12, 6))
 sns.boxplot(x='Model', y='F1-Score', hue='Feature_Set', data=df_all_results_classification)
-plt.title("Classification Model F1-Score Comparison (Different Feature Sets)") # Changed to English
+plt.title("Classification Model F1-Score Comparison (Different Feature Sets)") 
 plt.ylim(0, 1)
 plt.show()
 
@@ -647,7 +647,7 @@ if not X_all_features_for_importance.empty and not y_target_continuous_for_impor
             cbar=True, yticklabels=True, xticklabels=['Importance'],
             linewidths=0.5, linecolor='gray'
         )
-        plt.title("Random Forest Feature Importance (All Initial Candidate Features)") # Changed to English
+        plt.title("Random Forest Feature Importance (All Initial Candidate Features)") 
         plt.yticks(rotation=0)
         plt.tight_layout()
         importance_heatmap_path = os.path.join(base_path_report, "feature_importance_heatmap.png")
@@ -694,7 +694,7 @@ if feature_candidates_for_general_selection:
                 yticklabels=True, xticklabels=True,
                 linewidths=0.5, linecolor='gray', fmt=".2f"
             )
-            plt.title(f"Most Correlated Features with {target_col} (Pearson, Spearman, Kendall) - All Initial Candidate Features") # Changed to English
+            plt.title(f"Most Correlated Features with {target_col} (Pearson, Spearman, Kendall) - All Initial Candidate Features") 
             plt.yticks(rotation=0)
             plt.tight_layout()
             save_path_multi_corr = os.path.join(base_path_report, "heatmap_multi_correlation.png")
@@ -712,17 +712,18 @@ else:
 # ======= Model Performance Comparison Chart (for Feature Selection Methods) =======
 # 現在，這些圖表將包含 'feature_sets_for_comparison' 中的所有特徵集
 if not df_regression_compare.empty:
+    '''
     plt.figure(figsize=(10, 7))
     sns.barplot(x='Feature_Set', y='R2', hue='Model', data=df_regression_compare)
-    plt.title("Regression Model R² Comparison (Different Feature Sets)") # Changed to English
+    plt.title("Regression Model R² Comparison (Different Feature Sets)") 
     plt.ylim(0, 1)
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
-
+    '''
     plt.figure(figsize=(10, 7))
     sns.barplot(x='Feature_Set', y='MSE', hue='Model', data=df_regression_compare)
-    plt.title("Regression Model MSE Comparison (Different Feature Sets)") # Changed to English
+    plt.title("Regression Model MSE Comparison (Different Feature Sets)") 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
@@ -732,7 +733,7 @@ else:
 if not df_classification_compare.empty:
     plt.figure(figsize=(10, 7))
     sns.barplot(x='Feature_Set', y='Accuracy', hue='Model', data=df_classification_compare)
-    plt.title("Classification Model Accuracy Comparison (Different Feature Sets)") # Changed to English
+    plt.title("Classification Model Accuracy Comparison (Different Feature Sets)") 
     plt.ylim(0, 1)
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
@@ -740,7 +741,7 @@ if not df_classification_compare.empty:
 
     plt.figure(figsize=(10, 7))
     sns.barplot(x='Feature_Set', y='F1-Score', hue='Model', data=df_classification_compare)
-    plt.title("Classification Model F1-Score Comparison (Different Feature Sets)") # Changed to English
+    plt.title("Classification Model F1-Score Comparison (Different Feature Sets)") 
     plt.ylim(0, 1)
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
@@ -749,50 +750,51 @@ else:
     print("沒有可比較的分類模型結果資料。")
 
 # ======= Output Specific Accuracy Data =======
-print("\n=== Logistic Regression Classifier Accuracy Comparison ===") # Changed to English
+print("\n=== Logistic Regression Classifier Accuracy Comparison ===") 
 if 'Logistic Regression Classifier' in df_classification_compare['Model'].unique():
     lr_results = df_classification_compare[df_classification_compare['Model'] == 'Logistic Regression Classifier']
     if 'Engineered Features' in lr_results['Feature_Set'].values:
         eng_acc = lr_results[lr_results['Feature_Set'] == 'Engineered Features']['Accuracy'].mean()
         eng_f1 = lr_results[lr_results['Feature_Set'] == 'Engineered Features']['F1-Score'].mean()
-        print(f"Logistic Regression Classifier using 'Engineered Features':") # Changed to English
-        print(f"  Average Accuracy: {eng_acc:.4f}") # Changed to English
-        print(f"  Average F1-Score: {eng_f1:.4f}") # Changed to English
+        print(f"Logistic Regression Classifier using 'Engineered Features':") 
+        print(f"  Average Accuracy: {eng_acc:.4f}") 
+        print(f"  Average F1-Score: {eng_f1:.4f}") 
     else:
-        print("'Engineered Features' has no Logistic Regression Classifier results.") # Changed to English
+        print("'Engineered Features' has no Logistic Regression Classifier results.") 
 
     if 'OPS+ERA (Control)' in lr_results['Feature_Set'].values:
         ops_era_acc = lr_results[lr_results['Feature_Set'] == 'OPS+ERA (Control)']['Accuracy'].mean()
         ops_era_f1 = lr_results[lr_results['Feature_Set'] == 'OPS+ERA (Control)']['F1-Score'].mean()
-        print(f"Logistic Regression Classifier using 'OPS+ERA (Control)':") # Changed to English
-        print(f"  Average Accuracy: {ops_era_acc:.4f}") # Changed to English
-        print(f"  Average F1-Score: {ops_era_f1:.4f}") # Changed to English
+        print(f"Logistic Regression Classifier using 'OPS+ERA (Control)':") 
+        print(f"  Average Accuracy: {ops_era_acc:.4f}") 
+        print(f"  Average F1-Score: {ops_era_f1:.4f}") 
     else:
-        print("'OPS+ERA (Control)' has no Logistic Regression Classifier results.") # Changed to English
+        print("'OPS+ERA (Control)' has no Logistic Regression Classifier results.") 
 
     if 'RFECV' in lr_results['Feature_Set'].values:
         rfecv_acc = lr_results[lr_results['Feature_Set'] == 'RFECV']['Accuracy'].mean()
         rfecv_f1 = lr_results[lr_results['Feature_Set'] == 'RFECV']['F1-Score'].mean()
-        print(f"Logistic Regression Classifier using features selected by 'RFECV':") # Changed to English
-        print(f"  Average Accuracy: {rfecv_acc:.4f}") # Changed to English
-        print(f"  Average F1-Score: {rfecv_f1:.4f}") # Changed to English
+        print(f"Logistic Regression Classifier using features selected by 'RFECV':") 
+        print(f"  Average Accuracy: {rfecv_acc:.4f}") 
+        print(f"  Average F1-Score: {rfecv_f1:.4f}") 
     else:
-        print("'RFECV' has no Logistic Regression Classifier results.") # Changed to English
+        print("'RFECV' has no Logistic Regression Classifier results.") 
     
     if 'RFECV Combined Single Feature' in lr_results['Feature_Set'].values:
         rfecv_combined_acc = lr_results[lr_results['Feature_Set'] == 'RFECV Combined Single Feature']['Accuracy'].mean()
         rfecv_combined_f1 = lr_results[lr_results['Feature_Set'] == 'RFECV Combined Single Feature']['F1-Score'].mean()
-        print(f"Logistic Regression Classifier using 'RFECV Combined Single Feature':") # Changed to English
-        print(f"  Average Accuracy: {rfecv_combined_acc:.4f}") # Changed to English
-        print(f"  Average F1-Score: {rfecv_combined_f1:.4f}") # Changed to English
+        print(f"Logistic Regression Classifier using 'RFECV Combined Single Feature':") 
+        print(f"  Average Accuracy: {rfecv_combined_acc:.4f}") 
+        print(f"  Average F1-Score: {rfecv_combined_f1:.4f}") 
     else:
-        print("'RFECV Combined Single Feature' has no Logistic Regression Classifier results.") # Changed to English
+        print("'RFECV Combined Single Feature' has no Logistic Regression Classifier results.") 
 
 else:
-    print("No Logistic Regression Classifier results available for comparison.") # Changed to English
+    print("No Logistic Regression Classifier results available for comparison.") 
 
 
 # ======= Output Regression Model Performance Summary =======
+# 將 "and added new feature set" 改為註解
 print("\n=== Regression Model Performance Summary (Engineered Features vs OPS+ERA vs RFECV vs RFECV Combined vs RFECV Weighted Composite) ===") # Changed to English and added new feature set
 summary_reg_df = df_all_results_regression[df_all_results_regression['Feature_Set'].isin(['Engineered Features', 'OPS+ERA (Control)', 'RFECV', 'RFECV Combined Single Feature', 'RFECV Weighted Composite'])].copy() # Added new feature set
 
@@ -803,11 +805,11 @@ if not summary_reg_df.empty:
     ).reset_index()
 
     for index, row in grouped_summary.iterrows():
-        print(f"Feature Set: {row['Feature_Set']}, Model: {row['Model']}:") # Changed to English
-        print(f"  Average MSE: {row['Avg_MSE']:.4f}") # Changed to English
-        print(f"  Average R2: {row['Avg_R2']:.4f}") # Changed to English
+        print(f"Feature Set: {row['Feature_Set']}, Model: {row['Model']}:") 
+        print(f"  Average MSE: {row['Avg_MSE']:.4f}") 
+        print(f"  Average R2: {row['Avg_R2']:.4f}") 
 else:
-    print("No regression model performance data available for summary comparison.") # Changed to English
+    print("No regression model performance data available for summary comparison.") 
 
 
 # ======= Visualize Decision Tree (Using Engineered Features if available, else OPS+ERA or RFECV) =======
@@ -818,41 +820,41 @@ rf_model_for_vis = None
 # Priority: RFECV Weighted Composite > Engineered Features > RFECV > RFECV Combined Single Feature > OPS+ERA
 if 'RFECV_Weighted_Index' in merged.columns:
     final_features_for_tree = ['RFECV_Weighted_Index']
-    print("\nDecision tree will be visualized using 'RFECV Weighted Composite'.") # Changed to English
+    print("\nDecision tree will be visualized using 'RFECV Weighted Composite'.") 
     X_tree_data = merged[['RFECV_Weighted_Index']]
     y_tree_data = merged[target_col]
     _, rf_model_for_vis, dt_model_for_vis = run_regression_models(X_tree_data, y_tree_data)
 
 elif engineered_features and all(f in merged.columns for f in engineered_features):
     final_features_for_tree = engineered_features
-    print("\nDecision tree will be visualized using 'Engineered Features'.") # Changed to English
+    print("\nDecision tree will be visualized using 'Engineered Features'.") 
     X_tree_data = merged[engineered_features]
     y_tree_data = merged[target_col]
     _, rf_model_for_vis, dt_model_for_vis = run_regression_models(X_tree_data, y_tree_data)
 
 elif selected_features_rfecv and all(f in merged.columns for f in selected_features_rfecv):
     final_features_for_tree = selected_features_rfecv
-    print("\nDecision tree will be visualized using 'RFECV' selected original features.") # Changed to English
+    print("\nDecision tree will be visualized using 'RFECV' selected original features.") 
     X_tree_data = merged[selected_features_rfecv]
     y_tree_data = merged[target_col]
     _, rf_model_for_vis, dt_model_for_vis = run_regression_models(X_tree_data, y_tree_data)
 
 elif rfecv_combined_feature_name in merged.columns:
     final_features_for_tree = [rfecv_combined_feature_name]
-    print(f"\nDecision tree will be visualized using '{rfecv_combined_feature_name}'.") # Changed to English
+    print(f"\nDecision tree will be visualized using '{rfecv_combined_feature_name}'.") 
     X_tree_data = merged[[rfecv_combined_feature_name]]
     y_tree_data = merged[target_col]
     _, rf_model_for_vis, dt_model_for_vis = run_regression_models(X_tree_data, y_tree_data)
 
 elif ops_era_features and all(f in merged.columns for f in ops_era_features):
     final_features_for_tree = ops_era_features
-    print("\nDecision tree will be visualized using 'OPS+ERA (Control)'.") # Changed to English
+    print("\nDecision tree will be visualized using 'OPS+ERA (Control)'.") 
     X_tree_data = merged[ops_era_features]
     y_tree_data = merged[target_col]
     _, rf_model_for_vis, dt_model_for_vis = run_regression_models(X_tree_data, y_tree_data)
 
 else:
-    print("\nNo sufficient features available to plot decision tree.") # Changed to English
+    print("\nNo sufficient features available to plot decision tree.") 
 
 if dt_model_for_vis and rf_model_for_vis and final_features_for_tree:
     df_10y_for_tree = merged.groupby('Team')[final_features_for_tree + [target_col]].mean(numeric_only=True).reset_index()
@@ -862,7 +864,7 @@ if dt_model_for_vis and rf_model_for_vis and final_features_for_tree:
         # 1. Decision Tree (Single)
         plt.figure(figsize=(20, 10))
         plot_tree(dt_model_for_vis, feature_names=X_10y_for_tree.columns.tolist(), filled=True, rounded=True, max_depth=3)
-        plt.title(f"Decision Tree (max_depth=3) - Features: {', '.join(final_features_for_tree)}") # Changed to English
+        plt.title(f"Decision Tree (max_depth=3) - Features: {', '.join(final_features_for_tree)}") 
         plt.tight_layout()
         plt.savefig(os.path.join(base_path_report, "decision_tree_10y.png"), dpi=300)
         plt.show() # <<< 修改處
@@ -872,15 +874,15 @@ if dt_model_for_vis and rf_model_for_vis and final_features_for_tree:
         plt.figure(figsize=(20, 10))
         # Plot the first tree in Random Forest
         plot_tree(rf_model_for_vis.estimators_[0], feature_names=X_10y_for_tree.columns.tolist(), filled=True, rounded=True, max_depth=3)
-        plt.title(f"Random Forest - Single Tree (max_depth=3) - Features: {', '.join(final_features_for_tree)}") # Changed to English
+        plt.title(f"Random Forest - Single Tree (max_depth=3) - Features: {', '.join(final_features_for_tree)}") 
         plt.tight_layout()
         plt.savefig(os.path.join(base_path_report, "random_forest_tree_10y.png"), dpi=300)
         plt.show() # <<< 修改處
         plt.close()
     else:
-        print("Cannot plot decision tree: Feature data for plotting is empty.") # Changed to English
+        print("Cannot plot decision tree: Feature data for plotting is empty.") 
 else:
-    print("Cannot plot decision tree: Model not trained or final selected features are empty.") # Changed to English
+    print("Cannot plot decision tree: Model not trained or final selected features are empty.") 
 
 
 # ======= Save Results to CSV File (Multiple Sheets) =======
@@ -1039,11 +1041,11 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
     """
     print("\n" * 2) # 加入空行增加可讀性
     print("=" * 40)
-    print("      ⚾ MLB Win Probability Interactive Prediction ⚾") # Changed to English
+    print("      MLB Win Probability Interactive Prediction ") 
     print("=" * 40)
-    print("\nPlease enter the values for the following raw variables to predict win percentage.") # Changed to English
-    print("Enter 'exit' to quit the program.") # Changed to English
-    print("\n--- Note: Model accuracy is presented in the charts above and in the Excel report; single predictions cannot determine absolute accuracy. ---") # Changed to English
+    print("\nPlease enter the values for the following raw variables to predict win percentage.") 
+    print("Enter 'exit' to quit the program.") 
+    print("\n--- Note: Model accuracy is presented in the charts above and in the Excel report; single predictions cannot determine absolute accuracy. ---") 
 
     while True:
         try:
@@ -1054,20 +1056,20 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
             # 預設的核心棒球數據及其在 merged_data 中的平均值（用於建議值）
             # 注意：這裡只定義了哪些特徵是核心，實際提示會在後面的 RFECV 特徵迭代中處理
             core_feature_defaults = {
-                'OBP': (0.330, 'On-Base Percentage'), # Changed to English
-                'SLG': (0.420, 'Slugging Percentage'), # Changed to English
-                'OPS': (0.750, 'On-Base Plus Slugging'), # Changed to English
-                'WHIP': (1.25, 'Walks Plus Hits Per Inning Pitched'), # Changed to English
-                'ER': (0.5, 'Earned Runs'), # Changed to English
-                'ERA': (3.80, 'Earned Run Average'), # Changed to English
-                'FIP': (3.80, 'Fielding Independent Pitching'), # Changed to English
-                'BA': (0.250, 'Batting Average'), # Changed to English
-                'HR': (20, 'Home Runs'), # Changed to English
-                'SO': (100, 'Strikeouts'), # Changed to English
-                'BB': (50, 'Walks'), # Changed to English
-                'RBI': (70, 'Runs Batted In'), # Changed to English
-                'SB': (10, 'Stolen Bases'), # Changed to English
-                'IP': (150, 'Innings Pitched'), # Changed to English
+                'OBP': (0.330, 'On-Base Percentage'), 
+                'SLG': (0.420, 'Slugging Percentage'), 
+                'OPS': (0.750, 'On-Base Plus Slugging'), 
+                'WHIP': (1.25, 'Walks Plus Hits Per Inning Pitched'), 
+                'ER': (0.5, 'Earned Runs'), 
+                'ERA': (3.80, 'Earned Run Average'), 
+                'FIP': (3.80, 'Fielding Independent Pitching'), 
+                'BA': (0.250, 'Batting Average'), 
+                'HR': (20, 'Home Runs'), 
+                'SO': (100, 'Strikeouts'), 
+                'BB': (50, 'Walks'), 
+                'RBI': (70, 'Runs Batted In'), 
+                'SB': (10, 'Stolen Bases'), 
+                'IP': (150, 'Innings Pitched'), 
                 'SV': (20, 'Saves'), # Added for RFECV Weighted Composite
                 # 您可以根據數據中可能出現的其他關鍵數值特徵繼續添加
             }
@@ -1111,25 +1113,25 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                     if feature in merged_data.columns and not merged_data[feature].isnull().all():
                         avg_val = merged_data[feature].mean()
                     
-                    input_str = input(f"  Enter {desc} ({feature}, suggested value {avg_val:.3f}): ") # Changed to English
+                    input_str = input(f"  Enter {desc} ({feature}, suggested value {avg_val:.3f}): ") 
                     if input_str.lower() == 'exit': return
                     user_raw_inputs[feature] = float(input_str)
                     prompted_features_set.add(feature)
                 elif feature in merged_data.columns and np.issubdtype(merged_data[feature].dtype, np.number):
                     # 對於 RFECV 選出但不在核心預設列表中的數值特徵
                     avg_val = merged_data[feature].mean() if not merged_data[feature].isnull().all() else 0.0
-                    input_str = input(f"  Enter {feature} (suggested value {avg_val:.3f}): ") # Changed to English
+                    input_str = input(f"  Enter {feature} (suggested value {avg_val:.3f}): ") 
                     if input_str.lower() == 'exit': return
                     user_raw_inputs[feature] = float(input_str)
                     prompted_features_set.add(feature)
                 else:
-                    print(f"  Warning: Feature '{feature}' is undefined or non-numeric, unable to get input. Using default value 0.") # Changed to English
+                    print(f"  Warning: Feature '{feature}' is undefined or non-numeric, unable to get input. Using default value 0.") 
                     user_raw_inputs[feature] = 0.0
                     prompted_features_set.add(feature)
 
-            print(f"\n--- Prediction Results ---") # Changed to English
+            print(f"\n--- Prediction Results ---") 
             # 打印所有已接收或處理的原始輸入
-            print("Raw input values:", {k: f"{v:.3f}" if isinstance(v, (int, float)) else v for k, v in user_raw_inputs.items()}) # Changed to English
+            print("Raw input values:", {k: f"{v:.3f}" if isinstance(v, (int, float)) else v for k, v in user_raw_inputs.items()}) 
 
 
             # --- 使用 Engineered Features 模型預測 ---
@@ -1169,13 +1171,13 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                     if set(input_df_eng.columns) == set(eng_model.feature_names_in_):
                         input_df_eng = input_df_eng[eng_model.feature_names_in_]
                         predicted_win_pct_eng = eng_model.predict(input_df_eng)[0]
-                        print(f"Predicted Win Percentage using 'Engineered Features': {predicted_win_pct_eng:.4f}") # Changed to English
+                        print(f"Predicted Win Percentage using 'Engineered Features': {predicted_win_pct_eng:.4f}") 
                     else:
-                        print(f"Warning: 'Engineered Features' model input features mismatch. Cannot predict. Expected: {eng_model.feature_names_in_.tolist()}. Actual: {input_df_eng.columns.tolist()}.") # Changed to English
+                        print(f"Warning: 'Engineered Features' model input features mismatch. Cannot predict. Expected: {eng_model.feature_names_in_.tolist()}. Actual: {input_df_eng.columns.tolist()}.") 
                 except Exception as e:
-                    print(f"Prediction failed using 'Engineered Features': {e}") # Changed to English
+                    print(f"Prediction failed using 'Engineered Features': {e}") 
             else:
-                print("Cannot predict using 'Engineered Features' (model not trained or insufficient features).") # Changed to English
+                print("Cannot predict using 'Engineered Features' (model not trained or insufficient features).") 
 
             # --- 使用 OPS+ERA (Control) 模型預測 ---
             predicted_win_pct_ops_era = np.nan
@@ -1189,13 +1191,13 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                     if set(input_df_ops_era.columns) == set(ops_era_model.feature_names_in_):
                         input_df_ops_era = input_df_ops_era[ops_era_model.feature_names_in_]
                         predicted_win_pct_ops_era = ops_era_model.predict(input_df_ops_era)[0]
-                        print(f"Predicted Win Percentage using 'OPS+ERA (Control)': {predicted_win_pct_ops_era:.4f}") # Changed to English
+                        print(f"Predicted Win Percentage using 'OPS+ERA (Control)': {predicted_win_pct_ops_era:.4f}") 
                     else:
-                        print(f"Warning: 'OPS+ERA (Control)' model input features mismatch. Cannot predict. Expected: {ops_era_model.feature_names_in_.tolist()}. Actual: {input_df_ops_era.columns.tolist()}.") # Changed to English
+                        print(f"Warning: 'OPS+ERA (Control)' model input features mismatch. Cannot predict. Expected: {ops_era_model.feature_names_in_.tolist()}. Actual: {input_df_ops_era.columns.tolist()}.") 
                 except Exception as e:
-                    print(f"Prediction failed using 'OPS+ERA (Control)': {e}") # Changed to English
+                    print(f"Prediction failed using 'OPS+ERA (Control)': {e}") 
             else:
-                print("Cannot predict using 'OPS+ERA (Control)' (model not trained or insufficient features).") # Changed to English
+                print("Cannot predict using 'OPS+ERA (Control)' (model not trained or insufficient features).") 
 
             # --- 使用 RFECV 選出的原始特徵模型預測 ---
             predicted_win_pct_rfecv = np.nan
@@ -1220,7 +1222,7 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                                 composite_val += current_corr * user_raw_inputs.get(base_feat, 0)
                         input_values_rfecv[feature] = composite_val
                     else:
-                        print(f"  Warning: RFECV raw feature '{feature}' missing input value, using default 0.0.") # Changed to English
+                        print(f"  Warning: RFECV raw feature '{feature}' missing input value, using default 0.0.") 
                         input_values_rfecv[feature] = 0.0
 
                 input_df_rfecv = pd.DataFrame([input_values_rfecv])
@@ -1231,16 +1233,16 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                     if not input_df_rfecv.empty and not input_df_rfecv.isnull().any().any():
                         try:
                             predicted_win_pct_rfecv = rfecv_model.predict(input_df_rfecv)[0]
-                            print(f"Predicted Win Percentage using 'RFECV' raw features: {predicted_win_pct_rfecv:.4f}") # Changed to English
+                            print(f"Predicted Win Percentage using 'RFECV' raw features: {predicted_win_pct_rfecv:.4f}") 
                         except Exception as e:
-                            print(f"Prediction failed using 'RFECV' raw features: {e}") # Changed to English
+                            print(f"Prediction failed using 'RFECV' raw features: {e}") 
                     else:
-                        print("Cannot predict using 'RFECV' raw features (input data is empty or contains NaN).") # Changed to English
+                        print("Cannot predict using 'RFECV' raw features (input data is empty or contains NaN).") 
                 else:
-                    print(f"Error: RFECV raw feature model input features mismatch. Expected: {rfecv_model.feature_names_in_.tolist()}. Actual: {input_df_rfecv.columns.tolist()}. Cannot predict.") # Changed to English
+                    print(f"Error: RFECV raw feature model input features mismatch. Expected: {rfecv_model.feature_names_in_.tolist()}. Actual: {input_df_rfecv.columns.tolist()}. Cannot predict.") 
                     predicted_win_pct_rfecv = np.nan
             else:
-                print("Cannot predict using 'RFECV' raw features (model not trained or insufficient features).") # Changed to English
+                print("Cannot predict using 'RFECV' raw features (model not trained or insufficient features).") 
 
             # --- 使用 RFECV Combined Single Feature 模型預測 ---
             predicted_win_pct_rfecv_combined = np.nan
@@ -1251,7 +1253,7 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                 numeric_rfecv_selected_features_for_sum_local = [f for f in rfecv_features_list if f in merged_data.select_dtypes(include=np.number).columns]
 
                 if not numeric_rfecv_selected_features_for_sum_local:
-                    print(f"Warning: RFECV did not select any numeric features to create '{rfecv_combined_feature_name_func}'.") # Changed to English
+                    print(f"Warning: RFECV did not select any numeric features to create '{rfecv_combined_feature_name_func}'.") 
                 else:
                     for feature in numeric_rfecv_selected_features_for_sum_local:
                         if feature in user_raw_inputs:
@@ -1277,10 +1279,10 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                             if feature in merged_data.columns and not merged_data[feature].isnull().all():
                                 val = merged_data[feature].mean()
                                 combined_feature_value += val
-                                print(f"  Component '{feature}' for RFECV combined feature not directly provided, using its mean {val:.3f}.") # Changed to English
+                                print(f"  Component '{feature}' for RFECV combined feature not directly provided, using its mean {val:.3f}.") 
                             else:
                                 combined_feature_value += 0.0
-                                print(f"  Component '{feature}' for RFECV combined feature not directly provided and data is empty, using default 0.") # Changed to English
+                                print(f"  Component '{feature}' for RFECV combined feature not directly provided and data is empty, using default 0.") 
 
                 input_df_rfecv_combined = pd.DataFrame({rfecv_combined_feature_name_func: [combined_feature_value]})
                 
@@ -1289,15 +1291,15 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                         input_df_rfecv_combined = input_df_rfecv_combined[rfecv_combined_model.feature_names_in_]
                         if not input_df_rfecv_combined.empty and not input_df_rfecv_combined.isnull().any().any():
                             predicted_win_pct_rfecv_combined = rfecv_combined_model.predict(input_df_rfecv_combined)[0]
-                            print(f"Predicted Win Percentage using '{rfecv_combined_feature_name_func}': {predicted_win_pct_rfecv_combined:.4f}") # Changed to English
+                            print(f"Predicted Win Percentage using '{rfecv_combined_feature_name_func}': {predicted_win_pct_rfecv_combined:.4f}") 
                         else:
-                            print(f"Cannot predict using '{rfecv_combined_feature_name_func}' (input data is empty or contains NaN).") # Changed to English
+                            print(f"Cannot predict using '{rfecv_combined_feature_name_func}' (input data is empty or contains NaN).") 
                     else:
-                        print(f"Warning: '{rfecv_combined_feature_name_func}' model input features mismatch. Cannot predict.") # Changed to English
+                        print(f"Warning: '{rfecv_combined_feature_name_func}' model input features mismatch. Cannot predict.") 
                 except Exception as e:
-                    print(f"Prediction failed using '{rfecv_combined_feature_name_func}': {e}") # Changed to English
+                    print(f"Prediction failed using '{rfecv_combined_feature_name_func}': {e}") 
             else:
-                print(f"Cannot predict using '{rfecv_combined_feature_name_func}' (model not trained or insufficient features).") # Changed to English
+                print(f"Cannot predict using '{rfecv_combined_feature_name_func}' (model not trained or insufficient features).") 
 
             # --- 使用 RFECV Weighted Composite 模型預測 (已更新為使用帶正負號的 correlations) ---
             predicted_win_pct_rfecv_weighted_composite = np.nan
@@ -1316,26 +1318,26 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                             input_df_rfecv_weighted_composite_pred = input_df_rfecv_weighted_composite_pred[rfecv_weighted_composite_model.feature_names_in_]
                             if not input_df_rfecv_weighted_composite_pred.empty and not input_df_rfecv_weighted_composite_pred.isnull().any().any():
                                 predicted_win_pct_rfecv_weighted_composite = rfecv_weighted_composite_model.predict(input_df_rfecv_weighted_composite_pred)[0]
-                                print(f"Predicted Win Percentage using 'RFECV Weighted Composite': {predicted_win_pct_rfecv_weighted_composite:.4f}") # Changed to English
+                                print(f"Predicted Win Percentage using 'RFECV Weighted Composite': {predicted_win_pct_rfecv_weighted_composite:.4f}") 
                             else:
-                                print(f"Cannot predict using 'RFECV Weighted Composite' (input data is empty or contains NaN).") # Changed to English
+                                print(f"Cannot predict using 'RFECV Weighted Composite' (input data is empty or contains NaN).") 
                         else:
-                            print(f"Warning: 'RFECV Weighted Composite' model input features mismatch. Cannot predict. Expected: {rfecv_weighted_composite_model.feature_names_in_.tolist()}. Actual: {input_df_rfecv_weighted_composite_pred.columns.tolist()}.") # Changed to English
+                            print(f"Warning: 'RFECV Weighted Composite' model input features mismatch. Cannot predict. Expected: {rfecv_weighted_composite_model.feature_names_in_.tolist()}. Actual: {input_df_rfecv_weighted_composite_pred.columns.tolist()}.") 
                     else:
-                        print("Warning: Correlations for BB, ER, SV are not available. Cannot predict using 'RFECV Weighted Composite'.") # Changed to English
+                        print("Warning: Correlations for BB, ER, SV are not available. Cannot predict using 'RFECV Weighted Composite'.") 
                 except Exception as e:
-                    print(f"Prediction failed using 'RFECV Weighted Composite': {e}") # Changed to English
+                    print(f"Prediction failed using 'RFECV Weighted Composite': {e}") 
             else:
-                print(f"Cannot predict using 'RFECV Weighted Composite' (model not trained or insufficient features).") # Changed to English
+                print(f"Cannot predict using 'RFECV Weighted Composite' (model not trained or insufficient features).") 
 
             print("-" * 30)
 
         except ValueError:
-            print("Invalid input. Please enter a number.") # Changed to English
+            print("Invalid input. Please enter a number.") 
         except Exception as e:
-            print(f"An error occurred during prediction: {e}") # Changed to English
+            print(f"An error occurred during prediction: {e}") 
 
-    print("\nPrediction program ended.") # Changed to English
+    print("\nPrediction program ended.") 
 
 # --- 在所有分析和圖表生成後，運行互動式預測 ---
 # 只有當至少一個模型訓練成功時才運行互動式預測
@@ -1355,4 +1357,4 @@ if interactive_predictor_model_eng or interactive_predictor_model_ops_era or int
         target_col
     )
 else:
-    print("\nInteractive prediction not started as no models are available for prediction.") # Changed to English
+    print("\nInteractive prediction not started as no models are available for prediction.") 
