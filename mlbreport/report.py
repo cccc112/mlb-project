@@ -124,8 +124,6 @@ if engineered_features:
 else:
     print("沒有創建任何組合指標。")
 
-# === 加在你原本的 Feature Engineering 區塊之後 ===
-
 #  1. 建立 RFECV 選出特徵的加權組合：BB, ER, SV
 rfecv_base_features = ['BB', 'ER', 'SV']
 
@@ -162,7 +160,7 @@ if all(f in merged.columns for f in rfecv_base_features):
     else:
         print("\n❌ 無法計算相關係數，因為 RFECV 基礎變數或目標變數包含太多缺失值。")
 else:
-    print("\n❌ 無法建立 RFECV_Weighted_Index，因為 ['BB', 'ER', 'SV'] 中有變數缺失。")
+    print("\n 無法建立 RFECV_Weighted_Index，因為 ['BB', 'ER', 'SV'] 中有變數缺失。")
 
 # === 整合區塊結束 ===
 
@@ -867,7 +865,7 @@ if dt_model_for_vis and rf_model_for_vis and final_features_for_tree:
         plt.title(f"Decision Tree (max_depth=3) - Features: {', '.join(final_features_for_tree)}") 
         plt.tight_layout()
         plt.savefig(os.path.join(base_path_report, "decision_tree_10y.png"), dpi=300)
-        plt.show() # <<< 修改處
+        plt.show() 
         plt.close()
 
         # 2. Random Forest (Single Tree)
@@ -950,7 +948,7 @@ if ops_era_features and all(f in merged.columns for f in ops_era_features):
     y_for_interactive_model_ops_era = merged[target_col]
 
     if not X_for_interactive_model_ops_era.empty and not y_for_interactive_model_ops_era.empty and len(X_for_interactive_model_ops_era) > 1:
-        # 處理 NaN 值，以防萬一
+        # 處理 NaN 值
         if X_for_interactive_model_ops_era.isnull().any().any():
             X_for_interactive_model_ops_era = X_for_interactive_model_ops_era.fillna(X_for_interactive_model_ops_era.mean(numeric_only=True))
         if y_for_interactive_model_ops_era.isnull().any():
@@ -970,7 +968,7 @@ if selected_features_rfecv and all(f in merged.columns for f in selected_feature
     y_for_interactive_model_rfecv = merged[target_col]
 
     if not X_for_interactive_model_rfecv.empty and not y_for_interactive_model_rfecv.empty and len(X_for_interactive_model_rfecv) > 1:
-        # 處理 NaN 值，以防萬一
+        # 處理 NaN 值
         if X_for_interactive_model_rfecv.isnull().any().any():
             X_for_interactive_model_rfecv = X_for_interactive_model_rfecv.fillna(X_for_interactive_model_rfecv.mean(numeric_only=True))
         if y_for_interactive_model_rfecv.isnull().any():
@@ -1039,7 +1037,7 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
         merged_data (pd.DataFrame): 完整的資料集。
         target_col_name (str): 目標變數的名稱。
     """
-    print("\n" * 2) # 加入空行增加可讀性
+    print("\n" * 2)
     print("=" * 40)
     print("      MLB Win Probability Interactive Prediction ") 
     print("=" * 40)
@@ -1130,7 +1128,7 @@ def run_interactive_prediction(eng_model, ops_era_model, rfecv_model, rfecv_comb
                     prompted_features_set.add(feature)
 
             print(f"\n--- Prediction Results ---") 
-            # 打印所有已接收或處理的原始輸入
+            # 所有已接收或處理的原始輸入
             print("Raw input values:", {k: f"{v:.3f}" if isinstance(v, (int, float)) else v for k, v in user_raw_inputs.items()}) 
 
 
